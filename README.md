@@ -1,6 +1,6 @@
 # LENGUAJE PYTHON 🐍
 
-Este pequeño repositorio incluye diferentes temas acerca de el lenguaje python.
+Este pequeño repositorio incluye diferentes temas acerca de el lenguaje python,con el tiempo lo ire modificando para que te sea de mayor utilidad.
 
 # Contenido 🧐
 
