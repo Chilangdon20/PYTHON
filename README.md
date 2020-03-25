@@ -42,7 +42,11 @@ Necesitas tener conociemientos de estadistica si deseas usar la carpeta de DATA 
 
 ## Autor. ✒️
 
-Fernando Vazquez Sanchez.
+👤 **Fernando Vazquez Sanchez**
+
+- Github: [Fernando_Vazquez](https://github.com/Chilangdon20)
+- Twitter: [@mothernoisa](https://twitter.com/mothernoisa?s=09&fbclid=IwAR0q1edvYvE9f1GtXzo5sK8WTBFZqpd6g1yGIVGtF4CLUYwSBOaUKziNEKg)
+- Linkedin: [Fernando Vazquez](https://www.linkedin.com/in/fernando-vázquez-058189177/)
  
 
 ## !GRACIAS¡ 🎁
