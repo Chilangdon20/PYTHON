@@ -12,6 +12,8 @@ Este pequeño repositorio incluye diferentes temas acerca de el lenguaje python,
 
 * Graficas
 
+* Pandas
+
 * Machine Learning Basico
 
 * Manejo de ficheros
