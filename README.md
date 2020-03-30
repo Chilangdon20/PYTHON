@@ -6,7 +6,9 @@ Este pequeño repositorio incluye diferentes temas acerca de el lenguaje python,
 
 * Curso Basico
 
-* Curso Matematicas
+* Matematicas
+
+* Metodos Numericos
 
 * Data Science Curso
 
