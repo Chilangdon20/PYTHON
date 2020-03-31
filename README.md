@@ -40,7 +40,7 @@ Necesitas tener conociemientos de estadistica si deseas usar la carpeta de DATA 
 
 * [JupyterNotebook](https://jupyter.org/try)-Entorno de dessarrollo de Python
 * [GIT](https://github.com) - Repositorio
-* [Google_Colab](https://colab.research.google.com) - Usado para generar RSS
+* [Google_Colab](https://colab.research.google.com) - Usado para generar informes & codigo.
 
 
 
