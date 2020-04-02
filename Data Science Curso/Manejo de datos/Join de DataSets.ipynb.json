@@ -1,0 +1,563 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Join de DataSets"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Los conjuntos de datos unidos le permiten analizar datos de más conjuntos de datos juntos y, por lo tanto, utilizar datos de más fuentes de datos en un solo informe."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import pandas as pd"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 19,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "filepath = \"/Users/familiavs/Documents/GitHub/python-ml-course/datasets/athletes\""
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "data_main = pd.read_csv(\"/Users/familiavs/Documents/GitHub/python-ml-course/datasets/athletes/Medals.csv\", encoding = \"ISO-8859-1\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/html": [
+       "<div>\n",
+       "<style scoped>\n",
+       "    .dataframe tbody tr th:only-of-type {\n",
+       "        vertical-align: middle;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe tbody tr th {\n",
+       "        vertical-align: top;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe thead th {\n",
+       "        text-align: right;\n",
+       "    }\n",
+       "</style>\n",
+       "<table border=\"1\" class=\"dataframe\">\n",
+       "  <thead>\n",
+       "    <tr style=\"text-align: right;\">\n",
+       "      <th></th>\n",
+       "      <th>Athlete</th>\n",
+       "      <th>Age</th>\n",
+       "      <th>Year</th>\n",
+       "      <th>Closing Ceremony Date</th>\n",
+       "      <th>Gold Medals</th>\n",
+       "      <th>Silver Medals</th>\n",
+       "      <th>Bronze Medals</th>\n",
+       "      <th>Total Medals</th>\n",
+       "    </tr>\n",
+       "  </thead>\n",
+       "  <tbody>\n",
+       "    <tr>\n",
+       "      <th>0</th>\n",
+       "      <td>Michael Phelps</td>\n",
+       "      <td>23.0</td>\n",
+       "      <td>2008</td>\n",
+       "      <td>08/24/2008</td>\n",
+       "      <td>8</td>\n",
+       "      <td>0</td>\n",
+       "      <td>0</td>\n",
+       "      <td>8</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>1</th>\n",
+       "      <td>Michael Phelps</td>\n",
+       "      <td>19.0</td>\n",
+       "      <td>2004</td>\n",
+       "      <td>08/29/2004</td>\n",
+       "      <td>6</td>\n",
+       "      <td>0</td>\n",
+       "      <td>2</td>\n",
+       "      <td>8</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>2</th>\n",
+       "      <td>Michael Phelps</td>\n",
+       "      <td>27.0</td>\n",
+       "      <td>2012</td>\n",
+       "      <td>08/12/2012</td>\n",
+       "      <td>4</td>\n",
+       "      <td>2</td>\n",
+       "      <td>0</td>\n",
+       "      <td>6</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>3</th>\n",
+       "      <td>Natalie Coughlin</td>\n",
+       "      <td>25.0</td>\n",
+       "      <td>2008</td>\n",
+       "      <td>08/24/2008</td>\n",
+       "      <td>1</td>\n",
+       "      <td>2</td>\n",
+       "      <td>3</td>\n",
+       "      <td>6</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>4</th>\n",
+       "      <td>Aleksey Nemov</td>\n",
+       "      <td>24.0</td>\n",
+       "      <td>2000</td>\n",
+       "      <td>10/01/2000</td>\n",
+       "      <td>2</td>\n",
+       "      <td>1</td>\n",
+       "      <td>3</td>\n",
+       "      <td>6</td>\n",
+       "    </tr>\n",
+       "  </tbody>\n",
+       "</table>\n",
+       "</div>"
+      ],
+      "text/plain": [
+       "            Athlete   Age  Year Closing Ceremony Date  Gold Medals  \\\n",
+       "0    Michael Phelps  23.0  2008            08/24/2008            8   \n",
+       "1    Michael Phelps  19.0  2004            08/29/2004            6   \n",
+       "2    Michael Phelps  27.0  2012            08/12/2012            4   \n",
+       "3  Natalie Coughlin  25.0  2008            08/24/2008            1   \n",
+       "4     Aleksey Nemov  24.0  2000            10/01/2000            2   \n",
+       "\n",
+       "   Silver Medals  Bronze Medals  Total Medals  \n",
+       "0              0              0             8  \n",
+       "1              0              2             8  \n",
+       "2              2              0             6  \n",
+       "3              2              3             6  \n",
+       "4              1              3             6  "
+      ]
+     },
+     "execution_count": 7,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "data_main.head()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "6956"
+      ]
+     },
+     "execution_count": 8,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "#Podemos preguntarle a python cuantas veces aparece un atleta en el dataset.\n",
+    "\n",
+    "a = data_main[\"Athlete\"].unique().tolist()\n",
+    "len(a)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "(8618, 8)"
+      ]
+     },
+     "execution_count": 10,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "data_main.shape"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "data_country = pd.read_csv(\"/Users/familiavs/Documents/GitHub/python-ml-course/datasets/athletes/Athelete_Country_Map.csv\", encoding = \"ISO-8859-1\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 16,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/html": [
+       "<div>\n",
+       "<style scoped>\n",
+       "    .dataframe tbody tr th:only-of-type {\n",
+       "        vertical-align: middle;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe tbody tr th {\n",
+       "        vertical-align: top;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe thead th {\n",
+       "        text-align: right;\n",
+       "    }\n",
+       "</style>\n",
+       "<table border=\"1\" class=\"dataframe\">\n",
+       "  <thead>\n",
+       "    <tr style=\"text-align: right;\">\n",
+       "      <th></th>\n",
+       "      <th>Athlete</th>\n",
+       "      <th>Country</th>\n",
+       "    </tr>\n",
+       "  </thead>\n",
+       "  <tbody>\n",
+       "    <tr>\n",
+       "      <th>0</th>\n",
+       "      <td>Michael Phelps</td>\n",
+       "      <td>United States</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>1</th>\n",
+       "      <td>Natalie Coughlin</td>\n",
+       "      <td>United States</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>2</th>\n",
+       "      <td>Aleksey Nemov</td>\n",
+       "      <td>Russia</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>3</th>\n",
+       "      <td>Alicia Coutts</td>\n",
+       "      <td>Australia</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>4</th>\n",
+       "      <td>Missy Franklin</td>\n",
+       "      <td>United States</td>\n",
+       "    </tr>\n",
+       "  </tbody>\n",
+       "</table>\n",
+       "</div>"
+      ],
+      "text/plain": [
+       "            Athlete        Country\n",
+       "0    Michael Phelps  United States\n",
+       "1  Natalie Coughlin  United States\n",
+       "2     Aleksey Nemov         Russia\n",
+       "3     Alicia Coutts      Australia\n",
+       "4    Missy Franklin  United States"
+      ]
+     },
+     "execution_count": 16,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "data_country.head()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 17,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "6970"
+      ]
+     },
+     "execution_count": 17,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "len(data_country)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 18,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/html": [
+       "<div>\n",
+       "<style scoped>\n",
+       "    .dataframe tbody tr th:only-of-type {\n",
+       "        vertical-align: middle;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe tbody tr th {\n",
+       "        vertical-align: top;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe thead th {\n",
+       "        text-align: right;\n",
+       "    }\n",
+       "</style>\n",
+       "<table border=\"1\" class=\"dataframe\">\n",
+       "  <thead>\n",
+       "    <tr style=\"text-align: right;\">\n",
+       "      <th></th>\n",
+       "      <th>Athlete</th>\n",
+       "      <th>Country</th>\n",
+       "    </tr>\n",
+       "  </thead>\n",
+       "  <tbody>\n",
+       "    <tr>\n",
+       "      <th>1029</th>\n",
+       "      <td>Aleksandar Ciric</td>\n",
+       "      <td>Serbia</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>1086</th>\n",
+       "      <td>Aleksandar Ciric</td>\n",
+       "      <td>Serbia and Montenegro</td>\n",
+       "    </tr>\n",
+       "  </tbody>\n",
+       "</table>\n",
+       "</div>"
+      ],
+      "text/plain": [
+       "               Athlete                Country\n",
+       "1029  Aleksandar Ciric                 Serbia\n",
+       "1086  Aleksandar Ciric  Serbia and Montenegro"
+      ]
+     },
+     "execution_count": 18,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "data_country[data_country[\"Athlete\"] == \"Aleksandar Ciric\"]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 21,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "data_sports =pd.read_csv(\"/Users/familiavs/Documents/GitHub/python-ml-course/datasets/athletes/Athelete_Sports_Map.csv\", encoding =\"ISO-8859-1\" )"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 28,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/html": [
+       "<div>\n",
+       "<style scoped>\n",
+       "    .dataframe tbody tr th:only-of-type {\n",
+       "        vertical-align: middle;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe tbody tr th {\n",
+       "        vertical-align: top;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe thead th {\n",
+       "        text-align: right;\n",
+       "    }\n",
+       "</style>\n",
+       "<table border=\"1\" class=\"dataframe\">\n",
+       "  <thead>\n",
+       "    <tr style=\"text-align: right;\">\n",
+       "      <th></th>\n",
+       "      <th>Athlete</th>\n",
+       "      <th>Sport</th>\n",
+       "    </tr>\n",
+       "  </thead>\n",
+       "  <tbody>\n",
+       "    <tr>\n",
+       "      <th>0</th>\n",
+       "      <td>Michael Phelps</td>\n",
+       "      <td>Swimming</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>1</th>\n",
+       "      <td>Natalie Coughlin</td>\n",
+       "      <td>Swimming</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>2</th>\n",
+       "      <td>Aleksey Nemov</td>\n",
+       "      <td>Gymnastics</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>3</th>\n",
+       "      <td>Alicia Coutts</td>\n",
+       "      <td>Swimming</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>4</th>\n",
+       "      <td>Missy Franklin</td>\n",
+       "      <td>Swimming</td>\n",
+       "    </tr>\n",
+       "  </tbody>\n",
+       "</table>\n",
+       "</div>"
+      ],
+      "text/plain": [
+       "            Athlete       Sport\n",
+       "0    Michael Phelps    Swimming\n",
+       "1  Natalie Coughlin    Swimming\n",
+       "2     Aleksey Nemov  Gymnastics\n",
+       "3     Alicia Coutts    Swimming\n",
+       "4    Missy Franklin    Swimming"
+      ]
+     },
+     "execution_count": 28,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "data_sports.head()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 31,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/html": [
+       "<div>\n",
+       "<style scoped>\n",
+       "    .dataframe tbody tr th:only-of-type {\n",
+       "        vertical-align: middle;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe tbody tr th {\n",
+       "        vertical-align: top;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe thead th {\n",
+       "        text-align: right;\n",
+       "    }\n",
+       "</style>\n",
+       "<table border=\"1\" class=\"dataframe\">\n",
+       "  <thead>\n",
+       "    <tr style=\"text-align: right;\">\n",
+       "      <th></th>\n",
+       "      <th>Athlete</th>\n",
+       "      <th>Sport</th>\n",
+       "    </tr>\n",
+       "  </thead>\n",
+       "  <tbody>\n",
+       "    <tr>\n",
+       "      <th>1308</th>\n",
+       "      <td>Chen Jing</td>\n",
+       "      <td>Volleyball</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>1419</th>\n",
+       "      <td>Chen Jing</td>\n",
+       "      <td>Table Tennis</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>2727</th>\n",
+       "      <td>Matt Ryan</td>\n",
+       "      <td>Rowing</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>5003</th>\n",
+       "      <td>Matt Ryan</td>\n",
+       "      <td>Equestrian</td>\n",
+       "    </tr>\n",
+       "  </tbody>\n",
+       "</table>\n",
+       "</div>"
+      ],
+      "text/plain": [
+       "        Athlete         Sport\n",
+       "1308  Chen Jing    Volleyball\n",
+       "1419  Chen Jing  Table Tennis\n",
+       "2727  Matt Ryan        Rowing\n",
+       "5003  Matt Ryan    Equestrian"
+      ]
+     },
+     "execution_count": 31,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "data_sports[(data_sports[\"Athlete\"] == \"Chen Jing\") | (data_sports[\"Athlete\"] == \"Matt Ryan\")]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.7.3"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}
