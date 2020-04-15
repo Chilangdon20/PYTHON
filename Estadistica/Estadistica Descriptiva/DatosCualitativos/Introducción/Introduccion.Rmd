@@ -1,0 +1,38 @@
+---
+title: "IntroduccionEstadisticaDesc"
+author: "Fernando Vazquez"
+date: "4/15/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Analisis estadistico de los datos.
+
+Cuando tenemos una serie de datos que **describen** algunos aspectos de un **conjunto** de individuos queremos llevar a cabo un analisis estadistico. Estos analisis estadisticos se clasifican en:
+
+ * **Analisis exploratorio** , o **descriptivo**, si nuestro objetivo es resumir , representar y explicar los datos concretos de los que disponemos . la **ESTADISTICA DESCRIPTIVA** es el conjunto de tecnicas que usamos con ese fin.
+ 
+ * **Analisis inferencial** , si nuestro objetivo es deducir apartir de dichos datos,informacion sobre el total de la poblacion o las poblaciones de interes.Las tecnicas que se usan en este caso forman la estadistica **inferencial**.
+ 
+Cabe mencionar que siempre hay relacion entre ambos.Cualquier analisis inferencial se uele empezar explorando los datos que se usaran, asi como tambien muchas tecnicas descriptivas permiten estimar propiedades de la publacion de la que se a extraido una muestra.
+
+## EJEMPLO.
+La media aritmetica de las alturas de una muestra de individuos nos da un valor representativo de esta muestra, pero tambien estima la media de las alturas del total dela poblacion.
+ 
+# TIPOS DE DATOS
+
+## DATOS CUALITATIVOS:
+   
+   Son datos que expresan una **cualidad** del individuo.En R guardaremos las listas de datos cualitativos en vectores.
+
+## Datos Ordinales:
+
+  Son similares a los cualitativos con la diferencia de que se pueden **ordenar de manera natural** , un ejemplo seria la calificacion de un grupo de alumnos.En R se guardaran los datos ordinales en factores ordenados.
+
+## Datos Cuantitativos:
+
+Se refieren a **medidas**, tales como edades, longitudes, etc , En R guardaremos estos datos en vectores numericos.
+   
