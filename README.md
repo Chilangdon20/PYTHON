@@ -8,6 +8,10 @@ Este pequeño repositorio incluye diferentes temas acerca de el lenguaje python,
 
 * Matematicas
 
+* Estadistica
+
+* Probabilidad
+
 * Metodos Numericos
 
 * Data Science Curso
