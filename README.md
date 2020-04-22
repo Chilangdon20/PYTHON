@@ -10,6 +10,8 @@ Este pequeño repositorio incluye diferentes temas acerca de el lenguaje python,
 
 * Estadistica
 
+* Algreba
+
 * Probabilidad
 
 * Metodos Numericos
