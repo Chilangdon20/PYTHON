@@ -83,6 +83,5 @@ Necesitas tener conociemientos de estadistica si deseas usar la carpeta de DATA 
 * etc.
 
 
-
 ---
 ⌨️ con ❤️ por [Fernando_Vazquez](https://github.com/Chilangdon20) 😊
