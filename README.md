@@ -3,7 +3,6 @@
 ![GitHub watchers](https://img.shields.io/github/watchers/Chilangdon20/PYTHON?color=important&logoColor=important)
 ![GitHub forks](https://img.shields.io/github/forks/Chilangdon20/PYTHON?color=success)
 ![Github License](https://img.shields.io/badge/LICENCE-MIT-red)
-![Linkedin](https://img.shields.io/badge/Social-Linkedin-orange)
 
 <p align="center">
   <a href="#">
