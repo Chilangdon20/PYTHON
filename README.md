@@ -1,8 +1,8 @@
-![GitHub stars](https://img.shields.io/github/stars/Chilangdon20/PYTHON?color=green&logoColor=green&style=social)
 
-![GitHub forks](https://img.shields.io/github/forks/Chilangdon20/PYTHON?logoColor=blue&style=social)
-
-![GitHub watchers](https://img.shields.io/github/watchers/Chilangdon20/PYTHON?logoColor=yellow&style=social)
+![GitHub stars](https://img.shields.io/github/stars/Chilangdon20/PYTHON?color=blueviolet)
+![GitHub watchers](https://img.shields.io/github/watchers/Chilangdon20/PYTHON?color=important&logoColor=important)
+![Github License](https://img.shields.io/badge/LICENCE-MIT-blue)
+![GitHub forks](https://img.shields.io/github/forks/Chilangdon20/PYTHON?color=success)
 
 # LENGUAJE PYTHON 🐍
 
