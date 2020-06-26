@@ -4,12 +4,6 @@ Este pequeño repositorio incluye diferentes temas acerca de el lenguaje python,
 
 
 
-[![License][a4]][a4]
-
-
-https://img.shields.io/github/stars/Chilangdon20/PYTHON?color=green&logoColor=green&style=social
-[a4]: https://img.shields.io/badge/License-CC%20BY--NC--SA-green?style=for-the-badge&logo=appveyor
-
 
 # Contenido 🧐
 
