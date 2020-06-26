@@ -5,6 +5,7 @@
 ![Github License](https://img.shields.io/badge/LICENCE-MIT-red)
 
 
+<p align="center">
   <a href="#">
     <img src="https://user-images.githubusercontent.com/61173776/85868768-5b1ca900-b790-11ea-8aab-1b40f8c6dadc.jpeg" alt="Logo" width="150" height="150">
   </a>
