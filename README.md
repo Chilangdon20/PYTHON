@@ -3,15 +3,11 @@
 Este pequeño repositorio incluye diferentes temas acerca de el lenguaje python,con el tiempo lo ire modificando para que te sea de mayor utilidad.
 
 
-[![Issues][a1]][a1]
-[![Stars][a2]][a2]
-[![Forks][a3]][a3]
+
 [![License][a4]][a4]
 
 
-[a1]: https://img.shields.io/github.com/Chilangdon20/PYTHON/issues
-[a2]: https://img.shields.io/Chilangdon20/PYTHON/stargazers
-[a3]: https://img.shields.io/Chilangdon20/PYTHON/network/members
+https://img.shields.io/github/stars/Chilangdon20/PYTHON?color=green&logoColor=green&style=social
 [a4]: https://img.shields.io/badge/License-CC%20BY--NC--SA-green?style=for-the-badge&logo=appveyor
 
 
