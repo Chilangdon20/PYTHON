@@ -2,6 +2,16 @@
 
 Este pequeño repositorio incluye diferentes temas acerca de el lenguaje python,con el tiempo lo ire modificando para que te sea de mayor utilidad.
 
+
+<!-- PROJECT SHIELDS -->
+
+[![Issues][a1]][a1]
+[![Stars][a2]][a2]
+[![Forks][a3]][a3]
+[![License][a4]][a4]
+[![All Contributors][a5]][a5]
+
+
 # Contenido 🧐
 
 * Curso Basico
