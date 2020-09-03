@@ -23,6 +23,10 @@ Este pequeño repositorio incluye diferentes temas acerca de el lenguaje python,
 
 * Matematicas
 
+* Marketing
+
+* Importar datos de todo tipo.
+
 * Estadistica
 
 * Algreba
