@@ -1,15 +1,4 @@
-﻿  
-<!-- PORTADA Y ENCABEZADO -->
 
-<br />
-
-<p align="center">
-
-<a href="https://github.com/Chilangdon20/Codigo-Eficiente-Python">
-
-<img src="https://raw.githubusercontent.com/Chilangdon20/IMAGENES/master/ImagenesPython/Simple.%20Powerful..gif?token=AOSXAEFTZXZ7GEZF7ULTJH27JRIB2" alt="Logo" width="250" height="250">
-
-</a>
 
 <h3 align="center">Python aplicado al Marketing. 📚</h3>
 
