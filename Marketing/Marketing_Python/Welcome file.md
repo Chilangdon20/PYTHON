@@ -14,9 +14,9 @@ En esta parte del repositorio encontraras un notebook que podras descargar para 
 
 Este es el contenido del curso, mas adelante ire actualizando con nuevos temas y algunas carpetas faltantes.
 
-* [Introducción al curso]([https://github.com/Chilangdon20/PYTHON/tree/master/Marketing/Marketing_Python/Introduccio%CC%81n%20al%20Curso_1](https://github.com/Chilangdon20/PYTHON/tree/master/Marketing/Marketing_Python/Introduccio%CC%81n%20al%20Curso_1))
+* [Introducción al curso](https://github.com/Chilangdon20/PYTHON/tree/master/Marketing/Marketing_Python/Introduccio%CC%81n%20al%20Curso_1)
 
-* [Modelo de prediccion de cleintes]([https://github.com/Chilangdon20/PYTHON/tree/master/Marketing/Marketing_Python/Modelo_Prediccion_Cliente_Primer_Curso](https://github.com/Chilangdon20/PYTHON/tree/master/Marketing/Marketing_Python/Modelo_Prediccion_Cliente_Primer_Curso))
+* [Modelo de prediccion de cleintes](https://github.com/Chilangdon20/PYTHON/tree/master/Marketing/Marketing_Python/Modelo_Prediccion_Cliente_Primer_Curso)
 
 
 
