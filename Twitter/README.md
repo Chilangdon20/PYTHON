@@ -1,4 +1,4 @@
-﻿
+
 
 <h3 align="center">Analizando Twitter 🐦</h3>
 
@@ -14,12 +14,13 @@ En esta parte del repositorio encontraras un notebook que podras descargar para 
 
 Este es el contenido del curso, mas adelante ire actualizando con nuevos temas y algunas carpetas faltantes.
 
-* [Parte 1]([https://github.com/Chilangdon20/PYTHON/tree/master/Twitter/Data%20Analisis%20Twitter/Parte%201-Introduccion%20a%20la%20API%20de%20Twitter](https://github.com/Chilangdon20/PYTHON/tree/master/Twitter/Data%20Analisis%20Twitter/Parte%201-Introduccion%20a%20la%20API%20de%20Twitter))
+* [Parte 1](https://github.com/Chilangdon20/PYTHON/tree/master/Twitter/Data%20Analisis%20Twitter/Parte%201-Introduccion%20a%20la%20API%20de%20Twitter)
 
-* [Parte 2]([https://github.com/Chilangdon20/PYTHON/tree/master/Twitter/Data%20Analisis%20Twitter/Parte2-Teoria%20de%20redes%20y%20graficas%20con%20Twitter.](https://github.com/Chilangdon20/PYTHON/tree/master/Twitter/Data%20Analisis%20Twitter/Parte2-Teoria%20de%20redes%20y%20graficas%20con%20Twitter.))
-* [Parte 3]([https://github.com/Chilangdon20/PYTHON/tree/master/Twitter/Data%20Analisis%20Twitter/Parte3-Geolocalizacion%20de%20Tweets](https://github.com/Chilangdon20/PYTHON/tree/master/Twitter/Data%20Analisis%20Twitter/Parte3-Geolocalizacion%20de%20Tweets))
+* [Parte 2](https://github.com/Chilangdon20/PYTHON/tree/master/Twitter/Data%20Analisis%20Twitter/Parte2-Teoria%20de%20redes%20y%20graficas%20con%20Twitter.)
 
-* [Proyecto Final]([https://github.com/Chilangdon20/PYTHON/tree/master/Twitter/Data%20Analisis%20Twitter/PROPYECTO_FINAL](https://github.com/Chilangdon20/PYTHON/tree/master/Twitter/Data%20Analisis%20Twitter/PROPYECTO_FINAL))
+* [Parte 3](https://github.com/Chilangdon20/PYTHON/tree/master/Twitter/Data%20Analisis%20Twitter/Parte3-Geolocalizacion%20de%20Tweets)
+
+* [Proyecto Final](https://github.com/Chilangdon20/PYTHON/tree/master/Twitter/Data%20Analisis%20Twitter/PROPYECTO_FINAL)
 
 
 
