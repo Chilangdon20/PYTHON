@@ -26,7 +26,7 @@ def VenderComprarAccion(precio, n):
       
     
 
-    i = 
+    i = 0
     # creamos este loop , mientras que i sea mas pequeño que n-1 , esto significa que si i es mas pequeño que n-1 , entonces aun hay mas elementos a procesar dentro de nuestra lista de acciones.
 
     while (i < (n - 1)): 
