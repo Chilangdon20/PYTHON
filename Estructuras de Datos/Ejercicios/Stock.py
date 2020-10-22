@@ -4,6 +4,9 @@ def VenderComprarAccion(precio, n):
     
     Esta funcion sirve para 
     encontrar el maximo beneficio en la compra y venta de acciones.
+    
+
+    toma como argumentos la lista de acciones y el tamaño de nuestra lista de precios de acciones.
 
     parametros:
     
@@ -16,40 +19,43 @@ def VenderComprarAccion(precio, n):
     compra el dia:  n   vende el dia: n
 
     """      
-    # Los precios deben darse por al menos dos días. 
+    # En esta funcion primero verificamos que los precios se den por almenos 2 dias, de lo contrario regresamos.
+ 
     if (n == 1): 
         return
       
-    # Atravesar la matriz de precios dada 
-    i = 0
+    
+
+    i = 
+    # creamos este loop , mientras que i sea mas pequeño que n-1 , esto significa que si i es mas pequeño que n-1 , entonces aun hay mas elementos a procesar dentro de nuestra lista de acciones.
+
     while (i < (n - 1)): 
           
-        # Encontrar mínimos locales
-        # Tenga en cuenta que el límite es (n-2) ya que estamos 
-        # comparando el elemento presente con el siguiente elemento
+        # Ahora trataremos de encontrar un minimo local , para eso ejecutamos un ciclo while con la condicion de que el precio de la siguiente accion sea menor que el elemento actual. Hasta que se cumpla esta condicion incrementaremos el valor de i.
+
         while ((i < (n - 1)) and (precio[i + 1] <= precio[i])): 
             i += 1
           
-        # Si llegamos al final, rompe 
-        # ya que no hay más solución posible 
+        # Una vez terminado el ciclo , verificamos si i es igual a n-1 if(i == n-1):break , si este es el caso significa que no hay mas soluciones posibles y por lo tanto rompemos el ciclo.
+
         if (i == n - 1): 
             break
           
-        # Almacenar el índice de mínimos
+        # De lo contrario almacenamos el indice de nuestros minimos locale
         comprar = i 
         i += 1
           
-        # Encuentra máximos locales
-        # Note que el límite es (n-1) ya que estamos 
-        # comparando con el elemento anterior 
+        # buscaremos los maximos locales con un while , mientras que el precio del elemento actual sea mayor que el elemento anterior  y hasta que se cumpla esta condicion , seguimos incrementando el valor de i.
+
         while ((i < n) and (precio[i] >= precio[i - 1])): 
+          # Una vez salimos de este ciclo , guardamos el indice de maximos como i-
             i += 1
               
         # Almacenar el índice de máximos
         vender = i - 1
           
-        print("Compra el dia: ",comprar,"\t", 
-                "Vende el dia: ",vender) 
+        print("Compra accion el dia: ",comprar,"\t", 
+                "Vende accion  el dia: ",vender) 
           
 
 # precios de acciones
