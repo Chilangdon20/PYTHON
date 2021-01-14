@@ -1,0 +1,181 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# # Assignment 1: Building a Better Contact Sheet
+# ## Fernando Vazquez.S
+# 
+# ---
+# 
+# * Paso 1 : Importar librerias 
+
+# In[9]:
+
+
+import PIL
+from PIL import Image
+from PIL import ImageDraw
+from PIL import ImageFont
+from IPython.display import display
+
+
+# * Paso2 : leer y convertir a RGB la iamgen
+
+# In[11]:
+
+
+# leemos y convertimos nuestra imagen
+imagen=Image.open("readonly/msi_recruitment.gif")
+imagen=imagen.convert('RGB')
+
+
+# * paso 3: crear dos objetos `ancho`y `altura`
+
+# In[15]:
+
+
+ancho,altura = imagen.size
+
+
+# * paso 4 : Crear una nueva imagen , pasando la imagen cargada y el tamaño en una tupla
+
+# In[16]:
+
+
+nuevaImg = PIL.Image.new(imagen.mode,(ancho,(altura + 100)))
+
+
+# * paso 5: Pegar nuestra imagen y damos un nuevo tamaño
+
+# In[17]:
+
+
+nuevaImg.paste(imagen,(0,0))
+
+
+# * **Paso 6 : Crear una funcion para iterar sobre nuestras imagenes y mostrar la intensidad**
+
+# In[18]:
+
+
+def dibTexto(color,intensidad,imag):
+    """
+    ARGS : COLOR-> RECIBE EL COLOR DE IMAGEN,INTENSITDAD - > INTENSIDAD DE LA IMAGEN
+    ,IMAG -> IMAGEN
+    
+    FUNCIONAMIENTO:
+    funcion para iterar sobre nuestras imagenes y mostrar la intensidad
+    
+    OUTPUT : Imagen 
+    
+    """
+    texto = "canal {} , intensidad {},F.V".format(color,intensidad)
+    font = ImageFont.truetype(r'readonly/fanwood-webfont.ttf',75)
+    Dibujar = ImageDraw.Draw(imag)
+    Dibujar.text((10,470), texto, fill="white", font=font, align="left")
+
+
+# * **Paso 7 : Crear otra funcion**
+
+# In[19]:
+
+
+def seTIntensidad(intensidadNew,img,color):
+    """
+    ARGS : 
+    * intensidad de la imagen
+    * imagen
+    * color
+    
+    Func:
+    
+    Cambia la tonalidad de la imagen
+    
+    Output :
+    
+    Imagen con nuevo color 
+    
+    """
+    nuevaImagen = PIL.Image.new(img.mode,(nuevaImg.width,nuevaImg.height))
+    
+    for fila in range(altura):
+        for columna in range(ancho):
+            pixxel = img.getpixel((columna,fila))
+            if color == 0:
+                nuevaImagen.putpixel((columna,fila),(int(pixxel[0]*intensidadNew),pixxel[1],pixxel[2]))
+            elif color == 1:
+                nuevaImagen.putpixel((columna,fila),(pixxel[0],int(pixxel[1]*intensidadNew),pixxel[2]))
+            elif color == 2:
+                nuevaImagen.putpixel((columna,fila),(pixxel[0],pixxel[1],int(pixxel[2]*intensidadNew)))
+    return nuevaImagen          
+
+
+# * Paso 8: Crear una variable con la intensidad de los colores
+
+# In[20]:
+
+
+intensidaad = [0.1,0.5,0.9]
+
+
+# * Paso 9: Crear una variables colores , que sean rgb
+
+# In[21]:
+
+
+colorees = [0,1,2]
+
+
+# * Paso 10 : Creamos la lista donde vendran nuestras imagenes.
+
+# In[22]:
+
+
+imagenes = []
+
+
+# * Paso 11: Iterar sobre nuestras imagenes para cambiar la intensidad de nuestras imagenes
+
+# In[23]:
+
+
+for color in colorees:
+    for inten in intensidaad:
+        imagenes.append(seTIntensidad(inten,nuevaImg,color))
+        dibTexto(color,inten,imagenes[-1])
+
+
+# * Paso 12: Creamos nuestra contact sheet de tamaño 3x3 y creamos las variables para iterar sobre nuestros ejes de imagen.
+
+# In[24]:
+
+
+contact_sheet = PIL.Image.new(nuevaImg.mode,(nuevaImg.width*3,(nuevaImg.height)*3))
+x = 0
+y = 0
+
+
+# * Paso 13: Iterar sobre la imagen e ir pegando las imagenes en nuestra contact sheet.
+
+# In[25]:
+
+
+for img in imagenes:
+    contact_sheet.paste(img,(x,y))
+    
+    if x+nuevaImg.width == contact_sheet.width:
+        x = 0
+        y = y + nuevaImg.height
+    else:
+        x = x + nuevaImg.width
+
+
+# * Paso 14: Cambiamos el tamaño de nuestra imagen y la mostramos.
+
+# In[26]:
+
+
+contact_sheet = contact_sheet.resize((int(contact_sheet.width/2),int(contact_sheet.height/2)))
+display(contact_sheet)
+
+
+# Reposiroty in Github : [REPOSITORY ](https://github.com/Chilangdon20/PYTHON)
